@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Anniversary, Aliza! 🎂</title>
+    <style>
+        /* Base Setup */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #000000;
+            color: #ffffff;
+            overflow: hidden; /* Prevent scrolling for a full-screen focus */
+        }
+
+        /* Neon Glow Box for Image */
+        .cake-container {
+            position: relative;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 0 30px #ff00ff, 0 0 80px #00ffff;
+            animation: final-pulse 3s infinite alternate;
+            max-width: 90%;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fade-in 1.5s forwards, final-pulse 3s 1.5s infinite alternate;
+        }
+
+        /* Image and Neon Frame */
+        .image-frame {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 8px solid #00ffff;
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(0.1) brightness(1.1);
+        }
+
+        /* Text Styling */
+        h1 {
+            font-size: 4em;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+            margin: 0;
+            letter-spacing: 5px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #00ffff;
+            text-shadow: 0 0 8px #00ffff;
+            margin-top: 15px;
+            margin-bottom: 40px;
+            animation: text-flash 1.5s infinite alternate;
+        }
+
+        .message {
+            font-size: 1.6em;
+            color: #ccc;
+            margin-top: 30px;
+        }
+
+        /* Keyframes */
+        @keyframes fade-in {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes final-pulse {
+            0% { box-shadow: 0 0 30px #ff00ff, 0 0 80px #00ffff; }
+            100% { box-shadow: 0 0 30px #00ffff, 0 0 80px #ff00ff; }
+        }
+        @keyframes text-flash {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0.9; transform: scale(1.02); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cake-container">
+        <div class="image-frame">
+            <img src="https://i.postimg.cc/1X9x078h/aliza-placeholder.jpg" alt="Aliza's Photo">
+        </div>
+        
+        <h1>HAPPY FIRST ANNIVERSARY!</h1>
+        <h2>ALIZA, YOU ARE MY BEST YEAR.</h2>
+
+        <p class="message">
+            Har pal tumhare saath ek celebration hai. Yeh toh bas shuruaat hai, meri jaan. Forever to go! ❤️
+        </p>
+    </div>
+
+</body>
+</html>
