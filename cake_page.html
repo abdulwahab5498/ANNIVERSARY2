@@ -16,46 +16,36 @@
             text-align: center;
             background-color: #000000;
             color: #ffffff;
-            overflow: hidden; /* Prevent scrolling for a full-screen focus */
+            overflow: hidden; 
         }
 
-        /* Neon Glow Box for Image */
+        /* Neon Glow Box for Cake Content */
         .cake-container {
             position: relative;
             z-index: 10;
             background-color: rgba(0, 0, 0, 0.9);
-            padding: 40px;
+            padding: 60px 80px;
             border-radius: 25px;
             box-shadow: 0 0 30px #ff00ff, 0 0 80px #00ffff;
             animation: final-pulse 3s infinite alternate;
-            max-width: 90%;
+            max-width: 900px;
             opacity: 0;
             transform: scale(0.8);
             animation: fade-in 1.5s forwards, final-pulse 3s 1.5s infinite alternate;
         }
 
-        /* Image and Neon Frame */
-        .image-frame {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            border: 8px solid #00ffff;
-            box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
-            overflow: hidden;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .image-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(0.1) brightness(1.1);
+        /* Main Cake Graphic (Stylized) */
+        .cake-graphic {
+            font-size: 8em;
+            margin-bottom: 20px;
+            color: #ff69b4; /* Pink */
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff69b4;
+            animation: bounce-cake 2s infinite alternate;
         }
 
         /* Text Styling */
         h1 {
-            font-size: 4em;
+            font-size: 4.5em;
             color: #ff00ff;
             text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
             margin: 0;
@@ -63,18 +53,38 @@
         }
 
         h2 {
-            font-size: 2.5em;
+            font-size: 3em;
             color: #00ffff;
             text-shadow: 0 0 8px #00ffff;
             margin-top: 15px;
             margin-bottom: 40px;
-            animation: text-flash 1.5s infinite alternate;
         }
 
         .message {
             font-size: 1.6em;
             color: #ccc;
             margin-top: 30px;
+        }
+
+        /* NEXT STEP Button Styling */
+        #promise-btn {
+            padding: 18px 40px;
+            font-size: 1.7em;
+            margin-top: 40px;
+            background-color: transparent;
+            border: 4px solid #ff00ff;
+            color: #ff00ff;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #ff00ff;
+            transition: all 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        #promise-btn:hover {
+            background-color: #ff00ff20;
+            box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
+            transform: scale(1.05);
         }
 
         /* Keyframes */
@@ -86,25 +96,28 @@
             0% { box-shadow: 0 0 30px #ff00ff, 0 0 80px #00ffff; }
             100% { box-shadow: 0 0 30px #00ffff, 0 0 80px #ff00ff; }
         }
-        @keyframes text-flash {
-            0% { opacity: 1; transform: scale(1); }
-            100% { opacity: 0.9; transform: scale(1.02); }
+        @keyframes bounce-cake {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-5px); }
         }
     </style>
 </head>
 <body>
 
     <div class="cake-container">
-        <div class="image-frame">
-            <img src="https://i.postimg.cc/1X9x078h/aliza-placeholder.jpg" alt="Aliza's Photo">
-        </div>
+        
+        <div class="cake-graphic">🍰</div>
         
         <h1>HAPPY FIRST ANNIVERSARY!</h1>
         <h2>ALIZA, YOU ARE MY BEST YEAR.</h2>
 
         <p class="message">
-            Har pal tumhare saath ek celebration hai. Yeh toh bas shuruaat hai, meri jaan. Forever to go! ❤️
+            Yeh Anniversary cake hamari meethi shuruaat ki nishani hai. Lekin humara safar tabhi mazboot hoga jab hum kuch waade nibhayenge...
         </p>
+
+        <button id="promise-btn" onclick="window.location.href='future_promises.html';">
+            CHOOSE OUR FUTURE PROMISES ✨
+        </button>
     </div>
 
 </body>
